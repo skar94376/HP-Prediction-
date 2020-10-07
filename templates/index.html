@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BHP</title>
+    <!-- <script src="app.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+  </head>
+
+<body>
+<!-- <div class="jumbotron">
+<h1>Predict the House Price</h1>
+<h3>Enter the following values to predict th House Price</h3>
+<form action="/predict_home_price" method="POST">
+<input type="text" name="location" id="uiLocations" placeholder="location" required="required" >
+<input type="text" name="sqftarea" id="uisqft" placeholder="sqft" required="required">
+<input type="text" name="BHK" id="uibhk" placeholder="bhk" required="required">
+<input type="text" name="Bath" id="uibath" placeholder="bath" required="required">
+<button type="submit" class="btn btn-primary" onclick="onClickedEstimatePrice()">Predict</button>
+</form>
+<div id='uiEstimatedPrice' class='result'> <h2></h2> </div>
+<br>
+<br>
+{{prediction_text}}
+<br>   
+</div> -->
+
+  <div class="container">
+    <img src="C:\Users\Soumya Ranjan\Desktop\Demo\BengaluruHp\unsplash.jpg" alt="">
+    <div class="card mx-auto" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title">HOUSE PRICE PREDICTION IN BANGALURU</h5>
+        <p class="card-text">This is a small project on Machine Learning, where the best supervised model is obtained to 
+        predicct house price based on Location, Area of the house in sqft, BHK and bathrooms.
+        </p>
+      </div>
+      </div>
+    </div>
+
+    <div class="jumbotron mx-auto" style="width: 500px;">
+      <form action="/predict_home_price" method="POST">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Location select</label>
+          <select class="form-control" id="uiLocations" name="location" required="required">
+            <option>1st phase jp nagar</option>
+            <option>akshaya nagar</option>
+            <option>ambalipura</option>
+            <option>ambedkar nagar</option>
+            <option>amruthahalli</option>
+            <option>anandapura</option>
+            <option>ananth nagar</option>
+            <option>anekal</option>
+            <option>banashankari</option>
+            <option>basavangudi</option>
+            <option>bellandur</option>
+            <option>brookefield</option>
+            <option>chandapura</option>
+            <option>electronic city</option>
+            <option>frazer town</option>
+            <option>gunjur</option>
+            <option>hebbal</option>
+            <option>hosur road</option>
+            <option>kudlu</option>
+            <option>mahadevpura</option>
+            <option>singasandra</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">BHK</label>
+          <select class="form-control" id="uibhk" name="BHK" required='required'>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          </select>
+        </div>            
+      
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">BATHROOMS</label>
+            <select class="form-control" id="uibath" name="Bath" required='required'>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+        </div>
+      
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">SQFT AREA</label>
+          <input type='text' class="form-control" id="uisqft" name='sqftarea' required='required'></input>
+        </div>
+              
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" onclick="onClickedEstimatePrice()">PREDICT</button>
+        </div>
+      </form>  
+      <div id='uiEstimatedPrice' class='result'> <h2></h2> </div>
+      {{prediction_text}}
+    </div>
+</body>
+</html>
